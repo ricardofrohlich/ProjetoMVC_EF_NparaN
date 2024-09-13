@@ -4,6 +4,6 @@
     {
         public int EstudanteId { get; set; }
         public string Nome { get; set; }
-        public ICollection<EstudantesCursos> EstudantesCursos { get; set; }
+        public ICollection<EstudantesCursos>? EstudantesCursos { get; set; }
     }
 }

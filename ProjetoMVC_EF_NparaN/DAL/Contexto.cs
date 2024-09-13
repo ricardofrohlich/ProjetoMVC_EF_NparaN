@@ -18,9 +18,9 @@ namespace ProjetoMVC_EF_NparaN.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // chave composta para garantir que eu vou ter 1 registro de 1 estudante em 1 curso
             modelBuilder.Entity<EstudantesCursos>()
-                .HasKey(ec =>  new { ec.EstudanteID, ec.CursoId});
+                .HasKey(e => e.EstudantesCursosId);
+
             //chave estrangeira dentro da tabela EstudanteCursos referente ao Curso
             modelBuilder.Entity<EstudantesCursos>()
                 .HasOne(ec => ec.Curso)
